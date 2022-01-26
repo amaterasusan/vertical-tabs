@@ -13,7 +13,7 @@
   --menu-icon-width: 36px;
   --highlight-label-color: #bff8eb;
   --content-background: #fff;
-  --ham-icon-color: rgb(99, 97, 97);
+  --ham-icon-color: #559a9e;
 }
 
 * {
@@ -38,6 +38,7 @@ h1 {
   position: relative;
   width: var(--sidebar-width);
   font-size: 2.25em;
+  margin-top: calc(var(--menu-icon-width)*2);
   display: inline-block;
   text-align: center;
 }
@@ -75,7 +76,7 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  top: 30px;
+  margin-top: 20px;
   transition: all 0.7s ease-out;
 }
 
@@ -166,10 +167,10 @@ input[type='radio'][name='tabs']:first-of-type:checked ~ .slide {
 /* menu icon */
 #ham-icon {
   position: absolute;
-  bottom: 8px;
+  top: 8px;
+  left: 10px;
   width: var(--menu-icon-width);
   height: var(--menu-icon-width);
-  left: calc(var(--sidebar-width) / 2 - var(--menu-icon-width) / 2);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -233,7 +234,7 @@ input[type='checkbox'][name='ham-check']:checked + #ham-icon > span:after {
 }
 
 input[type='checkbox'][name='ham-check']:not(:checked) + #ham-icon {
-  left: 4px;
+  left: 10px;
 }
 
 input[type='checkbox'][name='ham-check']:not(:checked) ~ .tab-wrap label,
